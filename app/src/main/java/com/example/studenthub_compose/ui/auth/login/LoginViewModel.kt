@@ -27,6 +27,7 @@ class LoginViewModel @Inject constructor(
             val user = userRepository.getUserByUsername(uiState.value.userName)
 
             if (user != null && user.password == uiState.value.password) {
+                userRepository.signInUser(user.username)
                 event.emit(LoginEvent.SuccessLogin)
             } else {
                 uiState.update { currentState ->

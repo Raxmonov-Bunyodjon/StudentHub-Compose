@@ -1,6 +1,6 @@
 package com.example.studenthub_compose.ui.auth.register
 
-import android.R
+
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border

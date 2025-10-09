@@ -66,6 +66,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.material:material-icons-extended")
 
     // 🎨 Material 3 Design Components
     implementation("androidx.compose.material3:material3")
@@ -122,4 +123,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+
+
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
 }

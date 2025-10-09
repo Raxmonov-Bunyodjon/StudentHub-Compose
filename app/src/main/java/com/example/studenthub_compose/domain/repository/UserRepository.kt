@@ -1,7 +1,10 @@
 package com.example.studenthub_compose.domain.repository
 
+import androidx.datastore.dataStore
 import com.example.studenthub_compose.domain.model.User
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.runBlocking
 
 
 /**
@@ -49,6 +52,8 @@ interface UserRepository {
     /** Insert a new user into the database */
     suspend fun insertUser(user: User)
 
+
+
     /**
      * Delete a user.
      *
@@ -61,4 +66,8 @@ interface UserRepository {
 
     /** Clear session / logout user */
     suspend fun logout()
+
+    fun isUserSignedIn(): Boolean = runBlocking {
+        userUsernameFlow.firstOrNull() != null
+    }
 }

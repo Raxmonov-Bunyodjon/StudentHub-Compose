@@ -7,7 +7,9 @@ import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
 
 @Serializable
-object LoginNavRoute
+object LoginNavRoute  {
+    const val route = "login"
+}
 
 
 fun NavController.navigateToLogin(navOptions: NavOptions? = null) =
